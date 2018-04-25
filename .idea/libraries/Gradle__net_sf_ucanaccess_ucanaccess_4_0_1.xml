@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: net.sf.ucanaccess:ucanaccess:4.0.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.ucanaccess/ucanaccess/4.0.1/775808e2358fcb1f30ff043db72aa2cf8537b112/ucanaccess-4.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.ucanaccess/ucanaccess/4.0.1/1297a4a0ec913f929b5eedba303b2b8e44cd601d/ucanaccess-4.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,41 @@
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+task fatJar(type: Jar) {
+    manifest {
+        attributes 'Implementation-Title': 'KAGTEST',
+                'Implementation-Version': version,
+                'Main-Class': 'KAG.Login'
+    }
+    baseName = project.name + '-all'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    // https://mvnrepository.com/artifact/net.sf.ucanaccess/ucanaccess
+    compile group: 'net.sf.ucanaccess', name: 'ucanaccess', version: '4.0.1'
+    // https://mvnrepository.com/artifact/org.hsqldb/hsqldb
+    testCompile group: 'org.hsqldb', name: 'hsqldb', version: '2.3.1'
+    // https://mvnrepository.com/artifact/com.healthmarketscience.jackcess/jackcess
+    compile group: 'com.healthmarketscience.jackcess', name: 'jackcess', version: '2.1.6'
+    // https://mvnrepository.com/artifact/commons-logging/commons-logging
+    compile group: 'commons-logging', name: 'commons-logging', version: '1.1.1'
+    // https://mvnrepository.com/artifact/commons-lang/commons-lang
+    compile group: 'commons-lang', name: 'commons-lang', version: '2.6'
+    // https://mvnrepository.com/artifact/com.github.lgooddatepicker/LGoodDatePicker
+    compile group: 'com.github.lgooddatepicker', name: 'LGoodDatePicker', version: '10.3.1'
+    // https://mvnrepository.com/artifact/commons-validator/commons-validator
+    compile group: 'commons-validator', name: 'commons-validator', version: '1.4.0'
+    // https://mvnrepository.com/artifact/org.apache.poi/poi
+    compile group: 'org.apache.poi', name: 'poi', version: '3.17'
+    // https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml
+    compile group: 'org.apache.poi', name: 'poi-ooxml', version: '3.17'
+    compile 'com.intellij:forms_rt:7.0.3'
+}
